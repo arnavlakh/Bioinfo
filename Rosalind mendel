@@ -1,0 +1,25 @@
+import math 
+import numpy as np
+
+class indi():
+    def __init__(self, CH1, CH2, PT):
+        self.CH1 = CH1
+        self.CH2 = CH2
+        self.PT = PT
+
+
+p = 0
+def comb(a, b):
+    p = (math.factorial(a))/ (math.factorial(b)* math.factorial(a-b))
+    
+    print(p)
+    return p
+
+k = int(input('Put homozygous dominant'))
+m = int(input('Put heterozygous'))
+n = int(input('Put homozygous recessive'))
+p = k + m + n 
+
+kc1 = (k*m)/((p)*(p-1)) + (k)*(k+1)/((p)*(p-1)) + ((m)*(m-1)/((p)*(p-1)))*(0.75) + (k*n)/((p)*(p-1)) + (m*n)/((p)*(p-1))*0.5
+
+print(kc1)
